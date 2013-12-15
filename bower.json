@@ -1,0 +1,17 @@
+{
+  "name": "neurons-sql",
+  "version": "0.0.1",
+  "authors": [
+    "platdesign"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/platdesign/neurons-sql",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}
