@@ -17,8 +17,6 @@ class query {
 		$result = $stmt->execute($this->binds);
 		
 		return $this->parse($pdo, $stmt, $result);
-		
-		return $this->sql;
 	}
 	
 	public function parse($pdo, $stmt, $result) {
