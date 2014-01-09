@@ -12,6 +12,7 @@
 	
 		require 'class/query/query.php';
 		require 'class/query/select.php';
+		require 'class/query/selectSingle.php';
 		require 'class/query/insert.php';
 		require 'class/query/update.php';
 		require 'class/query/delete.php';
@@ -23,6 +24,10 @@
 		
 		$service->select = function($query, $binds, $classname='stdClass') {
 			return new sql\query\select($query, $binds, $classname);
+		};
+		
+		$service->selectSingle = function($query, $binds, $classname='stdClass') {
+			return new sql\query\selectSingle($query, $binds, $classname);
 		};
 		
 		$service->insert = function($query, $binds) {
