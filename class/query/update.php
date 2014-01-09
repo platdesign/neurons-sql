@@ -6,8 +6,12 @@ class update extends query {
 	
 
 	public function parse($pdo, $stmt, $result) {
-		return $stmt->fetchAll(\PDO::FETCH_CLASS, $this->classname);
+		if($stmt->rowCount()==1){
+			$this->trigger("done");
+			return true;
+		}
 	}
+
 }
 
 ?>

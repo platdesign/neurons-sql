@@ -33,6 +33,14 @@
 		$service->insert = function($query, $binds) {
 			return new sql\query\insert($query, $binds);
 		};
+
+		$service->update = function($query, $binds) {
+			return new sql\query\update($query, $binds);
+		};
+
+		$service->delete = function($query, $binds) {
+			return new sql\query\delete($query, $binds);
+		};
 		
 		return $service;
 	});
